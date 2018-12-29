@@ -1,0 +1,14 @@
+[1027/191042.250:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights.  (0xc0000022)
+[1027/191042.271:ERROR:exception_snapshot_win.cc(87)] thread ID 1868 not found in process
+[1027/191042.271:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[1128/134422.554:ERROR:process_info.cc(632)] range at 0x235d382000000000, size 0x22a fully unreadable
+[1128/134422.554:ERROR:process_info.cc(632)] range at 0x235d388200000000, size 0x22a fully unreadable
+[1128/134422.554:ERROR:process_info.cc(632)] range at 0x0, size 0x22a fully unreadable
+[1219/103319.585:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights.  (0xc0000022)
+[1219/103319.623:ERROR:exception_snapshot_win.cc(87)] thread ID 2280 not found in process
+[1219/103319.623:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0724/120407.175:ERROR:prune_crash_reports.cc(34)] PruneCrashReportDatabase: Failed to get pending reports
+[0904/173205.972:ERROR:process_reader_win.cc(242)] ReadMemory at 0x4faf5f4000 of 49152 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0904/173205.972:ERROR:crash_report_exception_handler.cc(111)] WriteEverything failed
+[0904/173205.987:ERROR:filesystem_win.cc(148)] DeleteFile C:\Users\root\AppData\Local\Temp\scoped_dir10612_32634\Crashpad\reports\ede62761-cab6-47a0-9edb-1b16bfc65642.dmp: The process cannot access the file because it is being used by another process. (0x20)
+[0904/173205.987:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)

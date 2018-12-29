@@ -1,0 +1,1986 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<RiskBoundReportProcess xmlns="http://www.acord.org/schema/data/draft/ReusableDataComponents/1"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.acord.org/schema/data/draft/ReusableDataComponents/1 ../ACORDSchemaWSDL/messages/AMLMessages.xsd">	
+	<MessageHeader>
+		<MessageId>00000000-0000-0000-0000-000000000000</MessageId>
+		<CorrelationId>00000000-0000-0000-0000-000000000000</CorrelationId>
+		<MessageDateTime>2018-03-10T16:19:32.427</MessageDateTime>
+	</MessageHeader>
+	<RiskBoundReport>
+		<CodeList key="CLCon01">
+			<ListAgencyCode>ISO</ListAgencyCode>
+		</CodeList>
+		<!-- For Alternate Operations Code
+		<CodeList key="CLOps01">
+			<ListAgencyCode>AIR</ListAgencyCode>
+		</CodeList>
+		-->
+		<Address key="ClientAddress15074">
+			<LineOne>1 Test Street</LineOne>
+			<!-- CR0274
+				This is mandatory in Australia to meet the requirements of the Australian 
+				Reinsurance Pool Corporation Scheme.  Mandatory for risks where the postcode 
+				is either 2000 (Sydney), 3000 (Melbourne), 4000 (Brisbane), 5000 (Adelaide) 
+				and 6000 (Perth). 
+			<LineOneDetails>
+				<StreetName>Test St</StreetName>
+				<StreetNumber>1</StreetNumber>
+			</LineOneDetails>
+			-->
+			<StateOrProvinceCode>NSW</StateOrProvinceCode>
+			<PostalCode>2320</PostalCode>
+			<CountryCode>AU</CountryCode>
+		</Address>
+		<Address key="BrokerAddress112">
+			<LineOne>2 Test Street</LineOne>
+			<CityName>LIVERPOOL</CityName>
+			<StateOrProvinceCode>NSW</StateOrProvinceCode>
+			<PostalCode>2170</PostalCode>
+			<CountryCode>AU</CountryCode>
+		</Address>
+		<Address key="BrokerAddress30">
+			<LineOne>3 Test Street</LineOne>
+			<CityName>BALGOWLAH</CityName>
+			<StateOrProvinceCode>NSW</StateOrProvinceCode>
+			<PostalCode>2093</PostalCode>
+			<CountryCode>AU</CountryCode>
+		</Address>
+		<Address key="LocAddressP126140R1">
+			<LineOne>1 Property Rd</LineOne>
+			<CityName>CECIL PARK</CityName>
+			<StateOrProvinceCode>NSW</StateOrProvinceCode>
+			<PostalCode>2178</PostalCode>
+			<CountryCode>AU</CountryCode>
+		</Address>
+		<Address key="LocAddressP126140R2">
+			<LineOne>2 Property Rd</LineOne>
+			<!-- AU cannot break down into separate components
+			<LineOneDetails>
+				<StreetName>2</StreetName>
+				<StreetNumber>Property Rd</StreetNumber>
+			</LineOneDetails>
+			-->
+			<CityName>BERALA</CityName>
+			<StateOrProvinceCode>NSW</StateOrProvinceCode>
+			<PostalCode>2141</PostalCode>
+			<CountryCode>AU</CountryCode>
+		</Address>
+		<Address key="LocAddressP126140R3">
+			<LineOne>3 Property Rd</LineOne>
+			<CityName>BRISBANE MARKET</CityName>
+			<StateOrProvinceCode>QLD</StateOrProvinceCode>
+			<PostalCode>4106</PostalCode>
+			<CountryCode>AU</CountryCode>
+		</Address>
+		<Address key="LocAddressP126140R4">
+			<LineOne>4 Property Rd</LineOne>
+			<CityName>DAINTREE</CityName>
+			<StateOrProvinceCode>QLD</StateOrProvinceCode>
+			<PostalCode>4873</PostalCode>
+			<CountryCode>AU</CountryCode>
+		</Address>
+		<Address key="LocAddressP126446R1">
+			<LineOne>5 Property Rd</LineOne>
+			<CityName>BOLWARRA</CityName>
+			<StateOrProvinceCode>NSW</StateOrProvinceCode>
+			<PostalCode>2320</PostalCode>
+			<CountryCode>AU</CountryCode>
+		</Address>
+		<!-- CR0296, CR0282, CR0284, CR0286, CR0100, CR0101, CR0102
+		<Address key="SuplusLinesAddress">
+			<LineOne>5 Property Rd</LineOne>
+			<LineTwo>Floor Number</LineTwo>
+			<CityName>BOLWARRA</CityName>
+			<StateOrProvinceCode>NSW</StateOrProvinceCode>
+			<PostalCode>2320</PostalCode>
+			<CountryCode>AU</CountryCode>
+		</Address>
+		
+		CR0096
+		<Person key="USSurplusLines">
+			<PersonName>
+				<FullName>Surplus Lines</FullNme>
+			</PersonName>
+			<BusinessCommunication>
+				<MailingAddress>
+					<AddressReferences addressReference="SuplusLinesAddress"/>
+				</MailingAddress>
+			</BusinessCommunication>
+		</Organization>
+		-->
+		<Organization key="Coverholder">
+			<OrganizationName>
+				<FullName>Test Underwriting Agency Pty Ltd</FullName>
+			</OrganizationName>
+			<OrganizationCommunication>
+				<BranchOfficeAddress>
+					<AssignedIdentifier>
+						<RoleCode>Insurer</RoleCode>
+						<Id>107437CZH</Id>
+					</AssignedIdentifier>
+				</BranchOfficeAddress>
+			</OrganizationCommunication>
+		</Organization>
+		<Organization key="ClientOrg15074">
+			<!-- CR0036
+				The individual policyholder’s fiscal code is required where the insured is 
+				located in Italy for insurance premiums paid on personal accident and life risks.  
+
+				The individual or company policyholder’s fiscal code is required where the 
+				insured is located in Italy for insurance contracts except third party 
+				liability and assistance contracts.
+
+				In other countries, the company registration code is optional.
+
+			<ExternalIdentifier>
+				<TypeCode>FiscalCode</TypeCode>
+				<Id>CR0036</Id>
+			</ExternalIdentifier>
+			-->
+			<OrganizationName>
+				<FullName>Test Client 1 Pty Ltd</FullName>
+			</OrganizationName>
+			<OrganizationCommunication>
+				<MailingAddress>
+					<AddressReferences addressReference="ClientAddress15074"/>
+				</MailingAddress>
+			</OrganizationCommunication>
+		</Organization>
+		<Organization key="ClientOrg51245">
+			<OrganizationName>
+				<FullName>Test Client 2 Pty Ltd</FullName>
+			</OrganizationName>
+		</Organization>
+		<Organization key="BrokerOrg112">
+			<OrganizationName>
+				<FullName>TEST INSURANCE BROKERS 1 PTY LTD</FullName>
+			</OrganizationName>
+			<OrganizationCommunication>
+				<MailingAddress>
+					<AddressReferences addressReference="BrokerAddress112"/>
+				</MailingAddress>
+			</OrganizationCommunication>
+		</Organization>
+		<Organization key="BrokerOrg30">
+			<OrganizationName>
+				<FullName>TEST INSURANCE BROKERS 2 PTY LTD</FullName>
+			</OrganizationName>
+			<OrganizationCommunication>
+				<MailingAddress>
+					<AddressReferences addressReference="BrokerAddress30"/>
+				</MailingAddress>
+			</OrganizationCommunication>
+		</Organization>
+		<DocumentId>00000000-0000-0000-0000-000000000000</DocumentId>
+		<Location key="LocP126140R1">
+			<!-- CR0169
+			<Description>Location Narrative</Description>
+			-->
+			<ItemCount>1</ItemCount>
+			<CatastropheZone>
+				<AssigningEntityCode>CRESTA</AssigningEntityCode>
+				<ZoneId>2178</ZoneId>
+			</CatastropheZone>
+		</Location>
+		<Location key="LocP126140R2">
+			<!-- CR0169
+			<Description>Location Narrative</Description>
+			-->			
+			<ItemCount>1</ItemCount>
+			<CatastropheZone>
+				<AssigningEntityCode>CRESTA</AssigningEntityCode>
+				<ZoneId>2141</ZoneId>
+			</CatastropheZone>
+		</Location>
+		<Location key="LocP126140R3">
+			<!-- CR0169
+			<Description>Location Narrative</Description>
+			-->			
+			<ItemCount>1</ItemCount>
+			<CatastropheZone>
+				<AssigningEntityCode>CRESTA</AssigningEntityCode>
+				<ZoneId>4106</ZoneId>
+			</CatastropheZone>
+		</Location>
+		<Location key="LocP126140R4">
+			<!-- CR0169
+			<Description>Location Narrative</Description>
+			-->			
+			<ItemCount>1</ItemCount>
+			<CatastropheZone>
+				<AssigningEntityCode>CRESTA</AssigningEntityCode>
+				<ZoneId>4873</ZoneId>
+			</CatastropheZone>
+		</Location>
+		<Location key="LocP126446R1">
+			<!-- CR0169
+			<Description>Location Narrative</Description>
+			-->			
+			<ItemCount>2</ItemCount>
+			<CatastropheZone>
+				<AssigningEntityCode>CRESTA</AssigningEntityCode>
+				<ZoneId>2320</ZoneId>
+			</CatastropheZone>
+		</Location>
+		<CurrencyCode>AUD</CurrencyCode>
+		<ReportPeriod>
+			<StartDate>2018-08-01</StartDate>
+			<EndDate>2018-08-31</EndDate>
+		</ReportPeriod>
+		<Policy key="Pol126140">
+			<LineOfBusinessCode>ISR</LineOfBusinessCode>
+			<AssignedIdentifier>
+				<RoleCode>Insured</RoleCode>
+				<Id>IS-4047</Id>
+			</AssignedIdentifier>
+			<!-- CR0278 
+			<PolicyholderTypeCode>Commercial</PolicyholderTypeCode>
+			-->
+			<RiskParticipationPercentIndicator>true</RiskParticipationPercentIndicator>
+			<PolicySection>
+				<!-- CR0037
+					The NAIC company code of the ceding US insurer, that is, the US reinsured.  
+					If there are multiple NAIC codes then the premium should be split over each 
+					code and thus appear on different rows.  If the cedent does not have a
+					NAIC code then the FEIN for the cedent must be specified.
+				<PolicyInsurer>
+					<Insurer>
+						<ExternalIdentifier>
+							<TypeCode>NAICInsurerCode</TypeCode>
+							<Id>CR0037</Id>
+						</ExternalIdentifier>
+					</Insurer>
+				</PolicyInsurer>
+				-->
+				<!-- CR0096
+					It is mandatory for all risks filed in the US which are classified as US 
+					surplus lines that details of the surplus lines broker be provided.
+				<PolicyProducer>
+					<RoleCode>SurplusLinesBroker</RoleCode>
+					<Producer>
+						<PersonReferences personReference="USSurplusLines"/>
+						<ProducerLicense>
+							<License>
+								<LicenseNumberId>US Surplus Lines</LicenseNumberId>
+							</License>
+						</ProducerLicense>
+					</Producer>
+				</PolicyProducer>
+				-->
+				<PolicyProducer>
+					<RoleCode>Coverholder</RoleCode>
+					<Producer>
+						<OrganizationReferences organizationReference="Coverholder"/>
+					</Producer>
+				</PolicyProducer>
+				<PolicyProducer>
+					<RoleCode>Underwriter</RoleCode>
+					<Producer>
+						<Contact>
+							<PersonReferences>
+								<PersonName>
+									<FullName>Andrew Bennett</FullName>
+								</PersonName>
+							</PersonReferences>
+						</Contact>
+					</Producer>
+				</PolicyProducer>
+				<PolicyProducer>
+					<RoleCode>Broker</RoleCode>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>30</Id>
+					</AssignedIdentifier>
+					<Producer>
+						<OrganizationReferences organizationReference="BrokerOrg30"/>
+					</Producer>
+				</PolicyProducer>
+				<PolicyProducer>
+					<RoleCode>LondonBroker</RoleCode>
+					<ProducerReferences producerReference="Binder1">
+						<ExternalIdentifier>
+							<TypeCode>UniqueMarketReference</TypeCode>
+							<Id>Contract For XML1</Id>
+						</ExternalIdentifier>
+						<OrganizationReferences>
+							<OrganizationName>
+								<FullName>Lloyds Broker Partners Ltd</FullName>
+							</OrganizationName>
+						</OrganizationReferences>
+						<BindingAuthorityPeriod>
+							<StartDate>2018-01-01</StartDate>
+							<EndDate>2018-12-31</EndDate>
+						</BindingAuthorityPeriod>
+					</ProducerReferences>
+					<RiskParticipationPercent>1.0000</RiskParticipationPercent>
+				</PolicyProducer>
+				<PolicyInsured>
+					<RoleCode>Insured</RoleCode>
+					<AssignedIdentifier>
+						<RoleCode>Insured</RoleCode>
+						<Id>51245</Id>
+					</AssignedIdentifier>
+					<InsuredReferences>
+						<OrganizationReferences organizationReference="ClientOrg51245">
+							<OrganizationName>
+								<FullName>Insured Name 1</FullName>
+							</OrganizationName>
+						</OrganizationReferences>
+					</InsuredReferences>
+				</PolicyInsured>
+				<PolicyProperty key="PropP126140R1">
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>1</Id>
+					</AssignedIdentifier>
+					<LocationReferences locationReference="LocP126140R1"/>
+					<AddressReferences addressReference="LocAddressP126140R1"/>
+					<Structure>
+						<BuiltYear>2000</BuiltYear>
+						<!-- CR0211
+						<UpgradedYear>2000</UpgradedYear>
+						-->
+						<!-- CR0243
+						<Measurement>
+							<TotalAreaMeasure>2</TotalAreaMeasure>
+						</Measurement>
+						-->
+						<Construction>
+							<AlternateConstructionCode codeListReference="CLCon01">4</AlternateConstructionCode>
+							<Description>STEEL</Description>
+						</Construction>
+						<StoreyCount>1</StoreyCount>
+					</Structure>
+					<Operations>
+						<ExternalIdentifier>
+							<TypeCode>ANZSIC2006Code</TypeCode>
+							<Id>471510</Id>
+						</ExternalIdentifier>
+						<Description>Fruit and Vegetable Packing Shed</Description>
+						<AlternateOperationsTypeCode codeListReference="CLOps01">Occupier</AlternateOperationsTypeCode>
+					</Operations>
+					<PropertyTransactionTypeCode>Renewal</PropertyTransactionTypeCode>
+				</PolicyProperty>
+				<PolicyProperty key="PropP126140R2">
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>2</Id>
+					</AssignedIdentifier>
+					<LocationReferences locationReference="LocP126140R2"/>
+					<AddressReferences addressReference="LocAddressP126140R2"/>
+					<Structure>
+						<BuiltYear>2009</BuiltYear>
+						<!-- CR0243
+						<Measurement>
+							<TotalAreaMeasure>2</TotalAreaMeasure>
+						</Measurement>
+						-->						
+						<Construction>
+							<AlternateConstructionCode codeListReference="CLCon01">2</AlternateConstructionCode>
+							<Description>Masonry</Description>
+						</Construction>
+						<StoreyCount>2</StoreyCount>
+					</Structure>
+					<Operations>
+						<ExternalIdentifier>
+							<TypeCode>ANZSIC2006Code</TypeCode>
+							<Id>471510</Id>
+						</ExternalIdentifier>
+						<Description>Fruit and Vegetable Packing Shed</Description>
+						<AlternateOperationsTypeCode codeListReference="CLOps01">Occupier</AlternateOperationsTypeCode>
+					</Operations>
+					<PropertyTransactionTypeCode>Renewal</PropertyTransactionTypeCode>
+				</PolicyProperty>
+				<PolicyProperty key="PropP126140R3">
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>3</Id>
+					</AssignedIdentifier>
+					<LocationReferences locationReference="LocP126140R3"/>
+					<AddressReferences addressReference="LocAddressP126140R3"/>
+					<Structure>
+						<BuiltYear>1999</BuiltYear>
+						<!-- CR0243
+						<Measurement>
+							<TotalAreaMeasure>2</TotalAreaMeasure>
+						</Measurement>
+						-->						
+						<Construction>
+							<AlternateConstructionCode codeListReference="CLCon01">4</AlternateConstructionCode>
+							<Description>STEEL</Description>
+						</Construction>
+						<StoreyCount>1</StoreyCount>
+					</Structure>
+					<Operations>
+						<ExternalIdentifier>
+							<TypeCode>ANZSIC2006Code</TypeCode>
+							<Id>471510</Id>
+						</ExternalIdentifier>
+						<Description>Fruit and Vegetable Packing Shed</Description>
+						<AlternateOperationsTypeCode codeListReference="CLOps01">Occupier</AlternateOperationsTypeCode>
+					</Operations>
+					<PropertyTransactionTypeCode>Renewal</PropertyTransactionTypeCode>
+				</PolicyProperty>
+				<PolicyProperty key="PropP126140R4">
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>4</Id>
+					</AssignedIdentifier>
+					<LocationReferences locationReference="LocP126140R4"/>
+					<AddressReferences addressReference="LocAddressP126140R4"/>
+					<Structure>
+						<BuiltYear>2002</BuiltYear>
+						<!-- CR0243
+						<Measurement>
+							<TotalAreaMeasure>2</TotalAreaMeasure>
+						</Measurement>
+						-->						
+						<Construction>
+							<AlternateConstructionCode codeListReference="CLCon01">4</AlternateConstructionCode>
+							<Description>STEEL</Description>
+						</Construction>
+						<StoreyCount>1</StoreyCount>
+					</Structure>
+					<Operations>
+						<ExternalIdentifier>
+							<TypeCode>ANZSIC2006Code</TypeCode>
+							<Id>471510</Id>
+						</ExternalIdentifier>
+						<Description>Fruit and Vegetable Packing Shed</Description>
+						<AlternateOperationsTypeCode codeListReference="CLOps01">Occupier</AlternateOperationsTypeCode>
+					</Operations>
+					<PropertyTransactionTypeCode>Renewal</PropertyTransactionTypeCode>
+				</PolicyProperty>
+				<CurrencyCode>AUD</CurrencyCode>
+				<StatusCode>Renew</StatusCode>
+				<StateOrProvinceCode>CR0088 - Mandatory for all direct insurance risks filed in the US</StateOrProvinceCode>
+				<PolicyBilling>
+					<FrequencyCode>Annual</FrequencyCode>
+					<InstalmentCount>1</InstalmentCount>
+				</PolicyBilling>
+				<Reinsurance>
+					<TypeCode>Direct</TypeCode>
+				</Reinsurance>
+				<InsuranceAmountItem>
+					<TypeCode>GrossPremium</TypeCode>
+					<ContractAmountItem>
+						<TypeCode>FullTermAmount</TypeCode>
+						<ItemAmount currencyCode="AUD">34451.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<TypeCode>Commission</TypeCode>
+						<ItemAmount currencyCode="AUD">7234.71</ItemAmount>
+						<ItemPercent>0.210000000</ItemPercent>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<ContractAmountItem>
+						<TypeCode>LocalTax</TypeCode>
+						<ItemAmount currencyCode="AUD">19323.14</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<TypeCode>LondonTax</TypeCode>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>PolicyFee</TypeCode>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<!-- CR0238 - Survey Fee if needed
+				<InsuranceAmountItem>
+					<TypeCode>SurveyFee</TypeCode>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>	
+				-->
+				<!-- CR0227 
+					Mandatory for coverholders located in the EU on binding authorities where
+					the coverholder is required by the terms of the binding authority to 
+					refer certain risks to London before they are bound
+				<ReferredIndicator>false</ReferredIndicator>
+				-->
+				<RiskBoundDate>2018-08-29</RiskBoundDate>
+			</PolicySection>
+			<CommercialPropertySection key="A">
+				<TypeCode>ISR</TypeCode>
+			</CommercialPropertySection>
+			<CommercialPropertyItemSection>
+				<InsurancePeriod>
+					<StartDate>2018-08-31</StartDate>
+					<EndDate>2018-08-31</EndDate>
+				</InsurancePeriod>
+				<PolicyInterestedPartyReferences policyInterestedPartyReference="PropP126140R1"/>
+				<Limit>
+					<ValuationTypeCode>TotalInsuredValue</ValuationTypeCode>
+					<LimitAmount>3120000.0000</LimitAmount>
+				</Limit>
+				<Limit>
+					<ValuationTypeCode>SumInsured</ValuationTypeCode>
+					<LimitAmount>3120000.0000</LimitAmount>
+				</Limit>
+				<InsuranceAmountItem>
+					<TypeCode>GrossPremium</TypeCode>
+					<ContractAmountItem>
+						<TypeCode>FullTermAmount</TypeCode>
+						<ItemAmount currencyCode="AUD">14664.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<TypeCode>Commission</TypeCode>
+						<ItemAmount currencyCode="AUD">3079.44</ItemAmount>
+						<ItemPercent>0.210000000</ItemPercent>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<ContractAmountItem>
+						<TypeCode>LocalTax</TypeCode>
+						<ItemAmount currencyCode="AUD">8719.83</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<TypeCode>LondonTax</TypeCode>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<!-- CR0077
+					<StateOrProvinceCode>NSW</StateOrProvinceCode>
+					-->
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>PolicyFee</TypeCode>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>GST</Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>1</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">14664.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">1466.40</ItemAmount>
+						<ItemPercent>0.100000000</ItemPercent>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<CountryCode>AU</CountryCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="ClientOrg51245"/>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>Fire Services Levy</Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>2</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">14664.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">4677.82</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<StateOrProvinceCode>NSW</StateOrProvinceCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="ClientOrg51245"/>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>Stamp Duty</Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>3</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">20808.21</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">1872.74</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<StateOrProvinceCode>NSW</StateOrProvinceCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="ClientOrg51245"/>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>Non Residence Tax</Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>8</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">18916.56</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">556.23</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<CountryCode>AU</CountryCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences>
+								<OrganizationName>
+									<FullName>Insurer</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>Fire Brigade Charge </Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>22</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">14664.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">146.64</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<CountryCode>AU</CountryCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences>
+								<OrganizationName>
+									<FullName>Insurer</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<Rate>
+					<TypeCode>Composite</TypeCode>
+					<PremiumRate>0.0047</PremiumRate>
+				</Rate>
+				<Coverage>
+					<TypeCode>Building</TypeCode>
+					<Limit>
+						<ValuationTypeCode>RebuildValue</ValuationTypeCode>
+						<LimitAmount>1000000.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>OtherStructures</TypeCode>
+					<Limit>
+						<LimitAmount>0.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Contents</TypeCode>
+					<Limit>
+						<ValuationTypeCode>RebuildValue</ValuationTypeCode>
+						<LimitAmount>1670000.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>BusinessInterruptionOrALE</TypeCode>
+					<Limit>
+						<LimitAmount>450000.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Flood</TypeCode>
+					<CoverageStatusCode>Excluded</CoverageStatusCode>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Earthquake</TypeCode>
+					<CoverageStatusCode>Included</CoverageStatusCode>
+					<Deductible>
+						<!-- CR0266
+						<TypeCode>Aggregate</TypeCode>
+						-->
+						<DeductibleAmountItem>
+							<ItemAmount>20000.00</ItemAmount>
+							<!-- CR0265
+							<ItemPercent>0</ItemPercent>
+							-->
+						</DeductibleAmountItem>
+					</Deductible>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Terrorism</TypeCode>
+					<CoverageStatusCode>Included</CoverageStatusCode>
+					<InsurancePeriod>
+						<StartDate>1900-01-01</StartDate>
+					</InsurancePeriod>
+					<InsuranceAmountItem>
+						<TypeCode>BasePremium</TypeCode>
+						<ContractAmountItem>
+							<ItemAmount>0.0000</ItemAmount>
+						</ContractAmountItem>
+					</InsuranceAmountItem>
+				</Coverage>
+				<EmployeeInformation>
+					<UnitCount>0</UnitCount>
+				</EmployeeInformation>
+			</CommercialPropertyItemSection>
+			<CommercialPropertyItemSection>
+				<InsurancePeriod>
+					<StartDate>2018-08-31</StartDate>
+					<EndDate>2018-08-31</EndDate>
+				</InsurancePeriod>
+				<PolicyInterestedPartyReferences policyInterestedPartyReference="PropP126140R2"/>
+				<Limit>
+					<ValuationTypeCode>TotalInsuredValue</ValuationTypeCode>
+					<LimitAmount>3500000.0000</LimitAmount>
+				</Limit>
+				<Limit>
+					<ValuationTypeCode>SumInsured</ValuationTypeCode>
+					<LimitAmount>3500000.0000</LimitAmount>
+				</Limit>
+				<InsuranceAmountItem>
+					<TypeCode>GrossPremium</TypeCode>
+					<ContractAmountItem>
+						<TypeCode>FullTermAmount</TypeCode>
+						<ItemAmount currencyCode="AUD">16450.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<TypeCode>Commission</TypeCode>
+						<ItemAmount currencyCode="AUD">3454.50</ItemAmount>
+						<ItemPercent>0.210000000</ItemPercent>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<ContractAmountItem>
+						<TypeCode>LocalTax</TypeCode>
+						<ItemAmount currencyCode="AUD">9779.73</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<TypeCode>LondonTax</TypeCode>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>PolicyFee</TypeCode>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>GST</Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>1</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">16450.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">1645.00</ItemAmount>
+						<ItemPercent>0.100000000</ItemPercent>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<CountryCode>AU</CountryCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="ClientOrg51245"/>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>Fire Services Levy</Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>2</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">16450.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">5247.55</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<StateOrProvinceCode>NSW</StateOrProvinceCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="ClientOrg51245"/>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>Stamp Duty</Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>3</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">23342.55</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">2100.83</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<StateOrProvinceCode>NSW</StateOrProvinceCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="ClientOrg51245"/>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>Non Residence Tax</Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>8</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">21220.50</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">621.85</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<CountryCode>AU</CountryCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences>
+								<OrganizationName>
+									<FullName>Insurer</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>Fire Brigade Charge </Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>22</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">16450.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">164.50</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<CountryCode>AU</CountryCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences>
+								<OrganizationName>
+									<FullName>Insurer</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<Rate>
+					<TypeCode>Composite</TypeCode>
+					<PremiumRate>0.0047</PremiumRate>
+				</Rate>
+				<Coverage>
+					<TypeCode>Building</TypeCode>
+					<Limit>
+						<ValuationTypeCode>RebuildValue</ValuationTypeCode>
+						<LimitAmount>2000000.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>OtherStructures</TypeCode>
+					<Limit>
+						<LimitAmount>0.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Contents</TypeCode>
+					<Limit>
+						<ValuationTypeCode>RebuildValue</ValuationTypeCode>
+						<LimitAmount>1500000.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>BusinessInterruptionOrALE</TypeCode>
+					<Limit>
+						<LimitAmount>0.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Flood</TypeCode>
+					<CoverageStatusCode>Excluded</CoverageStatusCode>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Earthquake</TypeCode>
+					<CoverageStatusCode>Included</CoverageStatusCode>
+					<Deductible>
+						<DeductibleAmountItem>
+							<ItemAmount>20000.00</ItemAmount>
+						</DeductibleAmountItem>
+					</Deductible>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Terrorism</TypeCode>
+					<CoverageStatusCode>Included</CoverageStatusCode>
+					<InsurancePeriod>
+						<StartDate>1900-01-01</StartDate>
+					</InsurancePeriod>
+					<InsuranceAmountItem>
+						<TypeCode>BasePremium</TypeCode>
+						<ContractAmountItem>
+							<ItemAmount>0.0000</ItemAmount>
+						</ContractAmountItem>
+					</InsuranceAmountItem>
+				</Coverage>
+				<EmployeeInformation>
+					<UnitCount>0</UnitCount>
+				</EmployeeInformation>
+			</CommercialPropertyItemSection>
+			<CommercialPropertyItemSection>
+				<InsurancePeriod>
+					<StartDate>2018-08-31</StartDate>
+					<EndDate>2018-08-31</EndDate>
+				</InsurancePeriod>
+				<PolicyInterestedPartyReferences policyInterestedPartyReference="PropP126140R3"/>
+				<Limit>
+					<ValuationTypeCode>TotalInsuredValue</ValuationTypeCode>
+					<LimitAmount>250000.0000</LimitAmount>
+				</Limit>
+				<Limit>
+					<ValuationTypeCode>SumInsured</ValuationTypeCode>
+					<LimitAmount>250000.0000</LimitAmount>
+				</Limit>
+				<InsuranceAmountItem>
+					<TypeCode>GrossPremium</TypeCode>
+					<ContractAmountItem>
+						<TypeCode>FullTermAmount</TypeCode>
+						<ItemAmount currencyCode="AUD">1175.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<TypeCode>Commission</TypeCode>
+						<ItemAmount currencyCode="AUD">246.75</ItemAmount>
+						<ItemPercent>0.210000000</ItemPercent>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<ContractAmountItem>
+						<TypeCode>LocalTax</TypeCode>
+						<ItemAmount currencyCode="AUD">289.99</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<TypeCode>LondonTax</TypeCode>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>PolicyFee</TypeCode>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>GST</Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>1</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">1175.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">117.50</ItemAmount>
+						<ItemPercent>0.100000000</ItemPercent>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<CountryCode>AU</CountryCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="ClientOrg51245"/>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>Stamp Duty</Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>3</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">1292.50</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">116.32</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<StateOrProvinceCode>QLD</StateOrProvinceCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="ClientOrg51245"/>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>Non Residence Tax</Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>8</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">1175.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">44.42</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<CountryCode>AU</CountryCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences>
+								<OrganizationName>
+									<FullName>Insurer</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>Fire Brigade Charge </Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>22</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">1175.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">11.75</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<CountryCode>AU</CountryCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences>
+								<OrganizationName>
+									<FullName>Insurer</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<Rate>
+					<TypeCode>Composite</TypeCode>
+					<PremiumRate>0.0047</PremiumRate>
+				</Rate>
+				<Coverage>
+					<TypeCode>Building</TypeCode>
+					<Limit>
+						<ValuationTypeCode>RebuildValue</ValuationTypeCode>
+						<LimitAmount>0.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>OtherStructures</TypeCode>
+					<Limit>
+						<LimitAmount>0.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Contents</TypeCode>
+					<Limit>
+						<ValuationTypeCode>RebuildValue</ValuationTypeCode>
+						<LimitAmount>250000.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>BusinessInterruptionOrALE</TypeCode>
+					<Limit>
+						<LimitAmount>0.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Flood</TypeCode>
+					<CoverageStatusCode>Excluded</CoverageStatusCode>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Earthquake</TypeCode>
+					<CoverageStatusCode>Included</CoverageStatusCode>
+					<Deductible>
+						<DeductibleAmountItem>
+							<ItemAmount>20000.00</ItemAmount>
+						</DeductibleAmountItem>
+					</Deductible>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Terrorism</TypeCode>
+					<CoverageStatusCode>Included</CoverageStatusCode>
+					<InsurancePeriod>
+						<StartDate>1900-01-01</StartDate>
+					</InsurancePeriod>
+					<InsuranceAmountItem>
+						<TypeCode>BasePremium</TypeCode>
+						<ContractAmountItem>
+							<ItemAmount>0.0000</ItemAmount>
+						</ContractAmountItem>
+					</InsuranceAmountItem>
+				</Coverage>
+				<EmployeeInformation>
+					<UnitCount>0</UnitCount>
+				</EmployeeInformation>
+			</CommercialPropertyItemSection>
+			<CommercialPropertyItemSection>
+				<InsurancePeriod>
+					<StartDate>2018-08-31</StartDate>
+					<EndDate>2018-08-31</EndDate>
+				</InsurancePeriod>
+				<PolicyInterestedPartyReferences policyInterestedPartyReference="PropP126140R4"/>
+				<Limit>
+					<ValuationTypeCode>TotalInsuredValue</ValuationTypeCode>
+					<LimitAmount>460000.0000</LimitAmount>
+				</Limit>
+				<Limit>
+					<ValuationTypeCode>SumInsured</ValuationTypeCode>
+					<LimitAmount>460000.0000</LimitAmount>
+				</Limit>
+				<InsuranceAmountItem>
+					<TypeCode>GrossPremium</TypeCode>
+					<ContractAmountItem>
+						<TypeCode>FullTermAmount</TypeCode>
+						<ItemAmount currencyCode="AUD">2162.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<TypeCode>Commission</TypeCode>
+						<ItemAmount currencyCode="AUD">454.02</ItemAmount>
+						<ItemPercent>0.210000000</ItemPercent>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<ContractAmountItem>
+						<TypeCode>LocalTax</TypeCode>
+						<ItemAmount currencyCode="AUD">533.59</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<TypeCode>LondonTax</TypeCode>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>PolicyFee</TypeCode>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>GST</Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>1</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">2162.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">216.20</ItemAmount>
+						<ItemPercent>0.100000000</ItemPercent>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<CountryCode>AU</CountryCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="ClientOrg51245"/>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>Stamp Duty</Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>3</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">2378.20</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">214.04</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<StateOrProvinceCode>QLD</StateOrProvinceCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="ClientOrg51245"/>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>Non Residence Tax</Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>8</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">2162.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">81.73</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<CountryCode>AU</CountryCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences>
+								<OrganizationName>
+									<FullName>Insurer</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<Description>Fire Brigade Charge </Description>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>22</Id>
+					</AssignedIdentifier>
+					<ContractAmountItem>
+						<TypeCode>TaxablePremium</TypeCode>
+						<ItemAmount currencyCode="AUD">2162.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">21.62</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<CountryCode>AU</CountryCode>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxAdministrator</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences organizationReference="Coverholder">
+								<OrganizationName>
+									<FullName>Test Underwriting Agency Pty Ltd</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyInterestedPartyReferences>
+						<RoleCode>TaxPayor</RoleCode>
+						<InterestedPartyReferences>
+							<OrganizationReferences>
+								<OrganizationName>
+									<FullName>Insurer</FullName>
+								</OrganizationName>
+							</OrganizationReferences>
+						</InterestedPartyReferences>
+					</PolicyInterestedPartyReferences>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<Rate>
+					<TypeCode>Composite</TypeCode>
+					<PremiumRate>0.0047</PremiumRate>
+				</Rate>
+				<Coverage>
+					<TypeCode>Building</TypeCode>
+					<Limit>
+						<ValuationTypeCode>RebuildValue</ValuationTypeCode>
+						<LimitAmount>400000.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>OtherStructures</TypeCode>
+					<Limit>
+						<LimitAmount>0.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Contents</TypeCode>
+					<Limit>
+						<ValuationTypeCode>RebuildValue</ValuationTypeCode>
+						<LimitAmount>60000.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>BusinessInterruptionOrALE</TypeCode>
+					<Limit>
+						<LimitAmount>0.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Flood</TypeCode>
+					<CoverageStatusCode>Excluded</CoverageStatusCode>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Earthquake</TypeCode>
+					<CoverageStatusCode>Included</CoverageStatusCode>
+					<Deductible>
+						<DeductibleAmountItem>
+							<ItemAmount>20000.00</ItemAmount>
+						</DeductibleAmountItem>
+					</Deductible>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Terrorism</TypeCode>
+					<CoverageStatusCode>Included</CoverageStatusCode>
+					<InsurancePeriod>
+						<StartDate>1900-01-01</StartDate>
+					</InsurancePeriod>
+					<InsuranceAmountItem>
+						<TypeCode>BasePremium</TypeCode>
+						<ContractAmountItem>
+							<ItemAmount>0.0000</ItemAmount>
+						</ContractAmountItem>
+					</InsuranceAmountItem>
+				</Coverage>
+				<EmployeeInformation>
+					<UnitCount>0</UnitCount>
+				</EmployeeInformation>
+			</CommercialPropertyItemSection>
+			<TransactionReportDetail>
+				<AssignedIdentifier>
+					<RoleCode>Insurer</RoleCode>
+					<Id>126140</Id>
+				</AssignedIdentifier>
+				<!-- CR0057
+					Mandatory for all transactions for which the risk inception date is not the 
+					start date; for example the endorsement start date.
+					CR0058
+					Mandatory for all transactions where the end/expiry date is known and 
+					this is not the same as the risk expiry date; for example 
+					the endorsement end date for a fixed period endorsement.
+				<TransactionPeriod>
+					<StartDate>2010-03-03</StartDate>
+					<EndDate>2010-03-03</EndDate>
+				</TransactionPeriod>
+				-->
+				<RiskClassificationDescription>CR0025 - Mandatory for all risks where the country of origin is the US or the original currency of premium is US dollars.</RiskClassificationDescription>
+			</TransactionReportDetail>
+			<!-- THIS WOULD ONLY APPEAR ON A CANCELLATION
+				<Cancellation>
+					<CancellationReasonCode>BusinessClosed</CancellationReasonCode>
+				</Cancellation
+			-->
+		</Policy>
+		<Policy key="Pol126446">
+			<LineOfBusinessCode>ISR</LineOfBusinessCode>
+			<AssignedIdentifier>
+				<RoleCode>Insured</RoleCode>
+				<Id>BP-1438</Id>
+			</AssignedIdentifier>
+			<RiskParticipationPercentIndicator>true</RiskParticipationPercentIndicator>
+			<PolicySection>
+				<PolicyProducer>
+					<RoleCode>Coverholder</RoleCode>
+					<Producer>
+						<OrganizationReferences organizationReference="Coverholder"/>
+					</Producer>
+				</PolicyProducer>
+				<PolicyProducer>
+					<RoleCode>Underwriter</RoleCode>
+					<Producer>
+						<Contact>
+							<PersonReferences>
+								<PersonName>
+									<FullName>Joanne Pirotta</FullName>
+								</PersonName>
+							</PersonReferences>
+						</Contact>
+					</Producer>
+				</PolicyProducer>
+				<PolicyProducer>
+					<RoleCode>Broker</RoleCode>
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>112</Id>
+					</AssignedIdentifier>
+					<Producer>
+						<OrganizationReferences organizationReference="BrokerOrg112"/>
+					</Producer>
+				</PolicyProducer>
+				<PolicyProducer>
+					<RoleCode>LondonBroker</RoleCode>
+					<ProducerReferences producerReference="Binder1">
+						<ExternalIdentifier>
+							<TypeCode>UniqueMarketReference</TypeCode>
+							<Id>Contract For XML1</Id>
+						</ExternalIdentifier>
+						<OrganizationReferences>
+							<OrganizationName>
+								<FullName>Lloyds Broker Partners Ltd</FullName>
+							</OrganizationName>
+						</OrganizationReferences>
+						<BindingAuthorityPeriod>
+							<StartDate>2018-01-01</StartDate>
+							<EndDate>2018-12-31</EndDate>
+						</BindingAuthorityPeriod>
+					</ProducerReferences>
+					<RiskParticipationPercent>1.0000</RiskParticipationPercent>
+				</PolicyProducer>
+				<PolicyInsured>
+					<RoleCode>Insured</RoleCode>
+					<AssignedIdentifier>
+						<RoleCode>Insured</RoleCode>
+						<Id>15074</Id>
+					</AssignedIdentifier>
+					<InsuredReferences>
+						<OrganizationReferences organizationReference="ClientOrg15074">
+							<OrganizationName>
+								<FullName>Piggs Peake Wines</FullName>
+							</OrganizationName>
+						</OrganizationReferences>
+					</InsuredReferences>
+				</PolicyInsured>
+				<PolicyProperty key="PropP126446R1">
+					<AssignedIdentifier>
+						<RoleCode>Broker</RoleCode>
+						<Id>1</Id>
+					</AssignedIdentifier>
+					<LocationReferences locationReference="LocP126446R1"/>
+					<AddressReferences addressReference="LocAddressP126446R1"/>
+					<Structure>
+						<BuiltYear>1987</BuiltYear>
+						<Construction>
+							<AlternateConstructionCode codeListReference="CLCon01">4BA</AlternateConstructionCode>
+							<Description>Light Metal Frame  </Description>
+						</Construction>
+						<StoreyCount>1</StoreyCount>
+					</Structure>
+					<Operations>
+						<ExternalIdentifier>
+							<TypeCode>ANZSIC2006Code</TypeCode>
+							<Id>218353</Id>
+						</ExternalIdentifier>
+						<Description>Wine making</Description>
+					</Operations>
+					<PropertyTransactionTypeCode>Endorsement</PropertyTransactionTypeCode>
+				</PolicyProperty>
+				<CurrencyCode>AUD</CurrencyCode>
+				<StatusCode>Endorsement</StatusCode>
+				<StateOrProvinceCode>CR0088 - Mandatory for all direct insurance risks filed in the US</StateOrProvinceCode>
+				<PolicyBilling>
+					<FrequencyCode>Annual</FrequencyCode>
+					<InstalmentCount>1</InstalmentCount>
+				</PolicyBilling>
+				<Reinsurance>
+					<TypeCode>Direct</TypeCode>
+				</Reinsurance>
+				<InsuranceAmountItem>
+					<TypeCode>GrossPremium</TypeCode>
+					<ContractAmountItem>
+						<TypeCode>FullTermAmount</TypeCode>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<TypeCode>Commission</TypeCode>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemPercent>0.210000000</ItemPercent>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<ContractAmountItem>
+						<TypeCode>LocalTax</TypeCode>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<TypeCode>LondonTax</TypeCode>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>PolicyFee</TypeCode>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<!-- CR0227 
+					Mandatory for coverholders located in the EU on binding authorities where
+					the coverholder is required by the terms of the binding authority to 
+					refer certain risks to London before they are bound
+				<ReferredIndicator>false</ReferredIndicator>
+				-->				
+				<RiskBoundDate>2018-09-04</RiskBoundDate>
+			</PolicySection>
+			<CommercialPropertySection key="A">
+				<TypeCode>ISR</TypeCode>
+			</CommercialPropertySection>
+			<CommercialPropertyItemSection>
+				<InsurancePeriod>
+					<StartDate>2018-07-28</StartDate>
+					<EndDate>2018-07-28</EndDate>
+				</InsurancePeriod>
+				<PolicyInterestedPartyReferences policyInterestedPartyReference="PropP126446R1"/>
+				<Limit>
+					<ValuationTypeCode>TotalInsuredValue</ValuationTypeCode>
+					<LimitAmount>0.0000</LimitAmount>
+				</Limit>
+				<Limit>
+					<ValuationTypeCode>SumInsured</ValuationTypeCode>
+					<LimitAmount>0.0000</LimitAmount>
+				</Limit>
+				<InsuranceAmountItem>
+					<TypeCode>GrossPremium</TypeCode>
+					<ContractAmountItem>
+						<TypeCode>FullTermAmount</TypeCode>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<TypeCode>Commission</TypeCode>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemPercent>0.210000000</ItemPercent>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>Tax</TypeCode>
+					<ContractAmountItem>
+						<TypeCode>LocalTax</TypeCode>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<ContractAmountItem>
+						<TypeCode>LondonTax</TypeCode>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<InsuranceAmountItem>
+					<TypeCode>PolicyFee</TypeCode>
+					<ContractAmountItem>
+						<ItemAmount currencyCode="AUD">0.00</ItemAmount>
+						<ItemFactor>1</ItemFactor>
+					</ContractAmountItem>
+					<PolicyProducerReferences policyProducerReference="Binder1"/>
+				</InsuranceAmountItem>
+				<Rate>
+					<TypeCode>Composite</TypeCode>
+					<PremiumRate>0.0050</PremiumRate>
+				</Rate>
+				<Coverage>
+					<TypeCode>Building</TypeCode>
+					<Limit>
+						<ValuationTypeCode>RebuildValue</ValuationTypeCode>
+						<LimitAmount>0.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>OtherStructures</TypeCode>
+					<Limit>
+						<LimitAmount>0.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Contents</TypeCode>
+					<Limit>
+						<ValuationTypeCode>RebuildValue</ValuationTypeCode>
+						<LimitAmount>0.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>BusinessInterruptionOrALE</TypeCode>
+					<Limit>
+						<LimitAmount>0.0000</LimitAmount>
+					</Limit>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Flood</TypeCode>
+					<CoverageStatusCode>Excluded</CoverageStatusCode>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Earthquake</TypeCode>
+					<CoverageStatusCode>Included</CoverageStatusCode>
+					<Deductible>
+						<DeductibleAmountItem>
+							<ItemAmount>20000.00</ItemAmount>
+						</DeductibleAmountItem>
+					</Deductible>
+				</Coverage>
+				<Coverage>
+					<TypeCode>Terrorism</TypeCode>
+					<CoverageStatusCode>Included</CoverageStatusCode>
+					<InsurancePeriod>
+						<StartDate>1900-01-01</StartDate>
+					</InsurancePeriod>
+					<InsuranceAmountItem>
+						<TypeCode>BasePremium</TypeCode>
+						<ContractAmountItem>
+							<ItemAmount>0.0000</ItemAmount>
+						</ContractAmountItem>
+					</InsuranceAmountItem>
+				</Coverage>
+				<EmployeeInformation>
+					<UnitCount>0</UnitCount>
+				</EmployeeInformation>
+			</CommercialPropertyItemSection>
+			<TransactionReportDetail>
+				<ExternalIdentifier>
+					<TypeCode>NewJerseySLA</TypeCode>
+					<Id>CR0098 - Mandatory for all risks filed in the US in the State of New Jersey which are classified as US surplus lines.</Id>
+				</ExternalIdentifier>
+				<AssignedIdentifier>
+					<RoleCode>Insurer</RoleCode>
+					<Id>126446</Id>
+				</AssignedIdentifier>
+				<TransactionPeriod>
+					<StartDate>2018-08-20</StartDate>
+					<EndDate>2018-07-28</EndDate>
+				</TransactionPeriod>
+			</TransactionReportDetail>
+		</Policy>
+		<PriorPolicy>
+			<PolicyReferences policyReference="Pol126140"/>
+			<Policy>
+				<PolicySection>
+					<CurrencyCode>AUD</CurrencyCode>
+					<InsuranceAmountItem>
+						<TypeCode>GrossPremium</TypeCode>
+						<ContractAmountItem>
+							<ItemAmount>34451.0000</ItemAmount>
+						</ContractAmountItem>
+					</InsuranceAmountItem>
+				</PolicySection>
+				<CommercialPropertyItemSection>
+					<Rate>
+						<TypeCode>Composite</TypeCode>
+						<PremiumRate>0.0047</PremiumRate>
+					</Rate>
+				</CommercialPropertyItemSection>
+			</Policy>
+		</PriorPolicy>
+		<PriorPolicy>
+			<PolicyReferences policyReference="Pol126446"/>
+			<Policy>
+				<PolicySection>
+					<CurrencyCode>AUD</CurrencyCode>
+					<InsuranceAmountItem>
+						<TypeCode>GrossPremium</TypeCode>
+						<ContractAmountItem>
+							<ItemAmount>0.0000</ItemAmount>
+						</ContractAmountItem>
+					</InsuranceAmountItem>
+				</PolicySection>
+				<CommercialPropertyItemSection>
+					<Rate>
+						<TypeCode>Composite</TypeCode>
+						<PremiumRate>0.0050</PremiumRate>
+					</Rate>
+				</CommercialPropertyItemSection>
+			</Policy>
+		</PriorPolicy>
+		<BroadLineOfBusinessCode>Commercial</BroadLineOfBusinessCode>
+	</RiskBoundReport>
+</RiskBoundReportProcess>
